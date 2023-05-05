@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="14dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/amount_label"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/billAmountEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/text_edit_hint_label"
+            android:minHeight="48dp"
+            android:textColorHint="@color/hint_color"
+            android:inputType="number" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/pax_label"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/paxAmountEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/text_edit_hint_label"
+            android:textColorHint="@color/hint_color"
+            android:inputType="number" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ToggleButton
+            android:id="@+id/svsToggle"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:textOff="@string/svs_disabled"
+            android:textOn="@string/svs_enabled" />
+
+        <ToggleButton
+            android:id="@+id/gstToggle"
+            android:layout_width="175dp"
+            android:layout_height="wrap_content"
+            android:textOff="@string/gst_disabled"
+            android:textOn="@string/gst_enabled" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/discount_label"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/discountAmountEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/text_edit_hint_label"
+            android:textColorHint="@color/hint_color"
+            android:inputType="number" />
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/paymentRadioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:checkedButton="@id/cashRadioButton"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/cashRadioButton"
+            android:layout_width="175dp"
+            android:layout_height="match_parent"
+            android:text="@string/cash_label" />
+
+        <RadioButton
+            android:id="@+id/payNowRadioButton"
+            android:layout_width="175dp"
+            android:layout_height="match_parent"
+            android:text="@string/paynow_label" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/splitButton"
+            android:layout_width="190dp"
+            android:layout_height="match_parent"
+            android:text="@string/split_label"
+            android:textAllCaps="true" />
+
+        <Button
+            android:id="@+id/resetButton"
+            android:layout_width="190dp"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/purple"
+            android:text="@string/reset_label"
+            android:textAllCaps="true" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/totalBillView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/total_bill_format"
+            android:paddingTop="10dp"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/paymentView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/each_pays_format"
+            android:textSize="18sp" />
+    </LinearLayout>
+</LinearLayout>
